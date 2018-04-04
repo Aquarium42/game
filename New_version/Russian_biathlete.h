@@ -5,7 +5,6 @@ class RussianBiathlete : public Biathlete
 public:
 	RussianBiathlete() {
 		speed = 9;
-		accuracy = 8;
 	}
 	void info() {
 		std::cout << "RussianBiathlete info:" << std::endl;
@@ -14,4 +13,7 @@ public:
 	void shoot() {
 		std::cout << "Russia shoot!!!" << std::endl;
 	}
+
+private:
+	const int accuracy = 8;
 };

@@ -4,7 +4,6 @@ class Biathlete
 protected:
 	int speed = 0;
 	int energy = 100;
-	int accuracy = 0;
 public:
 	
 	virtual void shoot() = 0;

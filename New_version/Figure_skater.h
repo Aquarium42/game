@@ -4,9 +4,7 @@ class Figure_skater
 protected:
 	int score = 0; //заработанные очки
 	int energy = 100;
-	 int skills = 0;
-	 int endurance = 0;
-public:
+	public:
 	void perform_a() {
 		score += 5;
 		energy -= 5;
