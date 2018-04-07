@@ -1,5 +1,7 @@
 #include "Hockey_player.h"
 #include <iostream>
+#include"configure_russian_hockey.h"
+
 class RussianHockey : public Hockey_player
 {
 public:
@@ -12,6 +14,6 @@ public:
 		std::cout << "EEeee, you score a goal! RUSSIA!!!";//потом ее надо будет доработать
 	}
 private:
-	const int accuracy = 8;
-	const int endurance = 10;
+	const int accuracy = accuracy_;
+	const int endurance = endurance_;
 };

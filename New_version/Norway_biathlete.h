@@ -1,11 +1,12 @@
 #include"Biathlete.h"
+#include"configure_norway_biathlete.h"
 #include<iostream>
 
 class NorwayBiathlete : public Biathlete
 {
 public:
 	NorwayBiathlete() {
-		speed = 9;
+		speed = speed_;
 	}
 	void info() {
 		std::cout << "NorwayBiathlete info" << std::endl;
@@ -16,5 +17,5 @@ public:
 		std::cout << "Norway shoot!!!" << std::endl;
 	}
 private:
-	const int accuracy = 9;
+	const int accuracy = accuracy_;
 };

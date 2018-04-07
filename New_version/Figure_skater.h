@@ -2,7 +2,7 @@
 class Figure_skater
 {
 protected:
-	int score = 0; //заработанные очки
+	int score; //заработанные очки
 	int energy = 100;
 	public:
 	void perform_a() {

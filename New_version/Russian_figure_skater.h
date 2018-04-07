@@ -1,4 +1,5 @@
 #include "Figure_skater.h"
+#include "configure_russian_figure_skater.h"
 #include <iostream>
 class RussianSkater : public Figure_skater
 {
@@ -8,6 +9,6 @@ public:
 		std::cout << "endurance = " << endurance << "skills =" << skills << "energy = " << energy << std::endl;
 	}
 private:
-	const int skills = 10;
-	const int endurance = 8;
+	const int skills = skills_;
+	const int endurance = endurance_;
 };

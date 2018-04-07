@@ -2,7 +2,7 @@
 class Biathlete
 {
 protected:
-	int speed = 0;
+	int speed;
 	int energy = 100;
 public:
 	
