@@ -5,6 +5,7 @@
 #include <vector>
 #include "Composite.h"
 #include "Composite_hockey.h"
+#include "Composite_biathlete.h"
 // Класс, содержащий всех спортсменов
 class Team
 {
@@ -25,8 +26,6 @@ public:
 
 		Composite_hockey hockey_man;
 		for (int i = 0; i <index.size(); i++) {
-			cout << index[i] << endl;
-			cout << "P" << endl;
 			hockey_man.add(hockey_player[index[i]]);
 		}
 		hockey_man.score_goal();
@@ -50,9 +49,12 @@ public:
 		if (figure_skater[number_of_player]->isenergy())
 			figure_skater[number_of_player]->perform_national_hard();
 	}
-	void shoot(int number_of_player){
-		if (biathlete[number_of_player]->isenergy())
-			biathlete[number_of_player]->shoot();
+	void shoot(vector <int> index) {
+		Composite_biathlete man;
+		for (int i = 0; i <index.size(); i++) {
+			man.add(biathlete[index[i]]);
+		}
+		man.shoot();
 	}
 	void accelerate(int number_of_player) {
 		if (biathlete[number_of_player]->isenergy())

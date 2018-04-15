@@ -16,7 +16,6 @@ public:
 	}
 	void score_goal() {
 		for (Hockey_player* player : children) {
-			cout << "I" << endl;
 			 player->score_goal();
 		}
 	}
