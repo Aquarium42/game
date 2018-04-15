@@ -11,5 +11,8 @@ public:
 	virtual Hockey_player* createHockey() = 0;
 	virtual Figure_skater* createSkater() = 0;
 	virtual Biathlete* createBiathlete() = 0;
+	virtual Figure_skater* createFigureOlympicChempion() = 0;
+	virtual Figure_skater* createFigureSometimesOlympicChempion() = 0;
+
 	virtual ~AthleteFactory() {}
 };
