@@ -33,6 +33,7 @@ public:
 
 		else {
 			cout << "'I'm falling! I can't do it :(' " << endl;
+			energy = -1;
 		}
 	}
 

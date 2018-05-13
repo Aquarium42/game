@@ -9,25 +9,11 @@ protected:
 	int score = 0;
 	
 public:
-	int get_score() {
-		return score;
-	}
+	int get_score();
 	virtual void shoot() = 0;
-	bool isenergy() {
-		if (energy > 0)
-			return true;
-		else return false;
-	}
-	void accelerate() {
-		if (energy >= 10) {
-			speed += 5;
-			energy -= 10;
-		}
-	}
-	void slow_down() {
-		speed -= 5;
-		energy += 5;
-	}
+	bool isenergy();
+	void accelerate();
+	void slow_down();
 	virtual void info() = 0;
 	virtual ~Biathlete() {}
 };

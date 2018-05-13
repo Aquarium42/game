@@ -13,7 +13,7 @@ public:
 	void score_goal() {
 		if (energy > minus_energy) {
 			if (energy / 10 + accuracy + endurance > 20) {
-				std::cout << "EEeee, you score a goal!NORWAY!!!";
+				std::cout << "EEeee, you score a goal!NORWAY!!!" << endl;
 				score += 1;
 			}
 			else if (energy / 10 + accuracy + endurance > 10) {
@@ -30,6 +30,8 @@ public:
 		}
 		else {
 			cout << "'I'm falling! I can't do it :(' " << endl;
+			energy = -1;
+
 		}
 		
 	}

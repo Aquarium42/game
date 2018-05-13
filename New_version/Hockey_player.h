@@ -7,16 +7,8 @@ protected:
 	int score = 0;
 	
 public:
-	int get_score() {
-		return score;
-	}
-	bool isenergy() {
-		if (energy > 0) {
-			return true;
-		}
-		else return false;
-
-	}
+	int get_score();
+	bool isenergy();
 
 	virtual void score_goal() = 0;
 	virtual void info() = 0;

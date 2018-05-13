@@ -149,7 +149,10 @@
   <ItemGroup>
     <ClInclude Include="AthleteFactory.h" />
     <ClInclude Include="Biathlete.h" />
+    <ClInclude Include="Choise_action.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Composite.h" />
+    <ClInclude Include="Composite_biathlete.h" />
     <ClInclude Include="configure_norway_biathlete.h" />
     <ClInclude Include="configure_norway_hockey.h" />
     <ClInclude Include="configure_russian_biathlete.h" />
@@ -166,6 +169,7 @@
     <ClInclude Include="Norway_biathlete.h" />
     <ClInclude Include="Norway_figure_skater.h" />
     <ClInclude Include="Norway_hockey_player.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="RussianAthleteFactory.h" />
     <ClInclude Include="Russian_biathlete.h" />
     <ClInclude Include="Russian_figure_skater.h" />
@@ -176,13 +180,18 @@
     <ClInclude Include="Unit.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Biathlete.cpp" />
+    <ClCompile Include="Decorator.cpp" />
+    <ClCompile Include="Figure_skater.cpp" />
     <ClCompile Include="game4.cpp" />
+    <ClCompile Include="Hockey_player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Team.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
