@@ -69,7 +69,7 @@ int Command::choose_enemy_one_sportsman(vector<int>& probably_players) {
 	return uniformInt(gen);
 }
 int Command::choose_user_one_sportsman(const vector<int>& probably_players) {
-		cout << "Who will do it? Write with space. (For example: 0 2 5). You can enter some of ";
+		cout << "Who will do it? (For example: 0). You can enter one of ";
 		for (int i = 0; i < probably_players.size(); i++) {
 			cout << probably_players[i] << " ";
 		}cout << endl;

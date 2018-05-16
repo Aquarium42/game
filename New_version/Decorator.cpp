@@ -27,14 +27,10 @@ Decorator::Decorator(Figure_skater* man) {
 void OlympicChempion::perform_national_middle() {
 		Decorator::perform_national_middle();
 		cout << "AND Beautiful JAMP" << endl;
-		cout << get_score() << endl;
 		increase_score_middle();
-		cout << get_score() << endl;
-	}
+		}
 	void OlympicChempion::perform_national_hard() {
 		Decorator::perform_national_middle();
 		cout << "triple toe loop! Splits in the air!!!" << endl;
-		cout << get_score() << endl;
 		increase_score_hard();
-		cout << get_score() << endl;
-	}
+			}
