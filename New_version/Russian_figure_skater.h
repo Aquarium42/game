@@ -20,6 +20,8 @@ public:
 		}
 		else {
 			cout << "'I'm tide!!!! It is too difficult for me!' " << endl;
+			energy = -1;
+		
 		}
 	}
 	void perform_national_hard() {

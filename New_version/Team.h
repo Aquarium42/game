@@ -6,12 +6,21 @@
 #include "Composite.h"
 #include "Composite_hockey.h"
 #include "Composite_biathlete.h"
+#include "Sport_id.h"
 // Класс, содержащий всех спортсменов
 class Team
 {
+private:
+	std::vector<class Observer *> views;
+
 public:
+
+	Team() { sport_without_energy.resize(count_kind_of_sport, false); }
+
 	~Team();
 	void info_();
+	void attach(Observer *obs);
+	void notify();
 	void score_goal(vector <int> index);
 	void perform_base_easy(int number_of_player);
 	void perform_base_middle(int number_of_player);
@@ -28,8 +37,10 @@ public:
 	void get_energy_biathlete(vector<int>& index);
 	void get_energy_figure_skater(vector<int>& index);
 	void get_energy_hockey_player(vector<int>& index);
+	void show_player_not_energy_in_sport(int sport_id);
 	std::vector<Hockey_player*> hockey_player;//хоккеисты
 	std::vector<Figure_skater*> figure_skater;//фигуристы
 	std::vector<Biathlete*> biathlete;//биатлонисты
+	vector<bool> sport_without_energy;
 };
 

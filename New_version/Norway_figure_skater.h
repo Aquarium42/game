@@ -16,6 +16,7 @@ public:
 			energy -= 15;
 		}
 		else {
+			energy = -1;
 			cout << "'I'm tide!!!! It is too difficult for me!' " << endl;
 		}
 	}
@@ -39,7 +40,7 @@ public:
 
 	void info() {
 		std::cout << "NorwaySkater info" << std::endl;
-		std::cout << "endurance = " << endurance << "sscore=" << score << "energy = " << energy << std::endl;
+		std::cout << "endurance = " << endurance << ", score=" << score << ", energy = " << energy << std::endl;
 	}
 private:
 	const int skills = skills_;

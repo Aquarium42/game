@@ -4,6 +4,7 @@
 class Biathlete: public Unit
 {
 protected:
+	int sport_id;
 	int speed;
 	int energy = 100;
 	int score = 0;

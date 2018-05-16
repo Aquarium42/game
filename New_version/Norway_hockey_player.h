@@ -12,14 +12,12 @@ public:
 	}
 	void score_goal() {
 		if (energy > minus_energy) {
-			if (energy / 10 + accuracy + endurance > 20) {
-				std::cout << "EEeee, you score a goal!NORWAY!!!" << endl;
+			if (energy / 10 + accuracy*0.5 + endurance*0.5 > 15) {
+				std::cout << " goal!NORWAY!!!" << endl;
 				score += 1;
 			}
-			else if (energy / 10 + accuracy + endurance > 10) {
-				std::mt19937 twister(52);
-				std::uniform_int_distribution<int> uniformInt(0,1);
-				int score_now = uniformInt(twister);
+			else if (energy / 10 + accuracy*0.5 + endurance*0.5 >= 11) {
+				int score_now = rand() % (2);
 				score += score_now;
 			}
 			else {

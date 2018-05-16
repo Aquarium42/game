@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Team.h"
+#include "Observer.h"
 Team::~Team() {
 	int i;
 	for (i = 0; i<hockey_player.size(); ++i)  delete hockey_player[i];
@@ -43,7 +44,7 @@ void Team::shoot(vector <int> index) {
 	Composite_biathlete man;
 	for (int i = 0; i <index.size(); i++) {
 		man.add(biathlete[index[i]]);
-	}
+			}
 	man.shoot();
 }
 void Team::accelerate(int number_of_player) {
@@ -106,4 +107,21 @@ int Team::score_all() {
 }
 int Team::score_one_biathlete(int index) {
 	return biathlete[index]->get_score();
+}
+
+void Team::notify() {
+	for (int i = 0; i < views.size(); i++) {
+		views[i]->update();
+	}
+}
+void Team::attach(Observer *model) {
+	views.push_back(model);
+}
+
+void Team::show_player_not_energy_in_sport(int sport_id) {
+	if (sport_without_energy[sport_id] == false) {
+		sport_without_energy[sport_id] = true;
+		notify();
+	}
+	cout << "Oy,  players have not energy!" << endl;
 }

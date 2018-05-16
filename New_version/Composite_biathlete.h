@@ -15,6 +15,7 @@ public:
 	}
 	void shoot() {
 		for (Biathlete* player : children) {
+			cout << "*" << endl;
 			player->shoot();
 		}
 	}

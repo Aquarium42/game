@@ -2,7 +2,7 @@
 #include "Hockey_player.h"
 #include <iostream>
 #include"configure_russian_hockey.h"
-#include <random>
+#include <random> 
 class RussianHockey : public Hockey_player
 {
 public:
@@ -14,28 +14,25 @@ public:
 
 	void score_goal() {
 		if (energy > minus_energy) {
-			if (energy / 10 + accuracy + endurance > 20) {
-				std::cout << "EEeee, you score a goal!NORWAY!!!" << endl;
+			if (energy / 10 + accuracy*0.5 + endurance*0.5 > 18) {
+				std::cout << "GOAL RUSSIA!!!" << endl;
 				score += 1;
 			}
-			else if (energy / 10 + accuracy + endurance > 10) {
-				std::mt19937 twister(72);
-				std::uniform_int_distribution<int> uniformInt(0, 1);
-				int score_now = uniformInt(twister);
+			else  {
+				int score_now = rand() % (2);
 				score += score_now;
+				if (score_now == 0)
+				{
+					cout << "OUUU, the puck flew past. :(( " << endl;
+				}
+				else { cout << "goal!" << endl; }
 			}
-			else {
-				cout << "OUUU, the puck flew past. :(( " << endl;
-			}
-
 			energy -= minus_energy;
 		}
 		else {
 			cout << "'I'm falling! I can't do it :(' " << endl;
 			energy = -1;
-
 		}
-
 	}
 private:
 	const int accuracy = accuracy_;
